@@ -8,6 +8,6 @@ int additionner(int a, int b){
 
 int main()
 {
-    printf("%d\n", additionner(1,4));
+    printf(""Laddition de a et b est :%d\n", additionner(1,4));
     return 0;
 }
