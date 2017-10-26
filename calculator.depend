@@ -4,3 +4,15 @@
 
 1509020597 c:\users\pc-nelson\documents\github\calculator\fonctions.h
 
+1509033374 source:c:\users\pc-benjamindst\documents\github\calculators\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+
+1509032884 c:\users\pc-benjamindst\documents\github\calculators\fonctions.h
+
+1509033432 source:c:\users\pc-benjamindst\documents\github\calculators\fonctions.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+
