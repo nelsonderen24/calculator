@@ -21,7 +21,8 @@ Fraction additionner(Fraction *fraction1, Fraction *fraction2); //hugo
 Fraction diviser(Fraction *fraction1, Fraction *fraction2); //hugo
 Fraction soustraire(Fraction *fraction1, Fraction *fraction2); //leo
 Fraction multiplier(Fraction *fraction1, Fraction *fraction2);  //leo
-int comparer(Fraction *fraction1, Fraction *fraction2); //benjamin
+void comparer(Fraction fraction1, Fraction fraction2);
+int comparerbis(Fraction *fraction1, Fraction *fraction2); //benjamin
 void metreSurMemeDenominateur(Fraction *fraction1, Fraction *fraction2);
 
 Fraction simplifier(Fraction *fraction1);  //utiliser pgcd des deux nombres et diviser chaque nombre par le pgcd (nelson)

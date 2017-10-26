@@ -31,9 +31,30 @@ Fraction additionner(Fraction *fraction1, Fraction *fraction2){
   fraction.numerateur = ((fraction1->numerateur * fraction2->denominateur) + (fraction2->numerateur * fraction1->denominateur));
   fraction.denominateur = (fraction1->denominateur * fraction2->denominateur); //oubli ;
   return fraction;
+
 }
 
-int comparer(Fraction *fraction1, Fraction *fraction2) {
+void comparer(Fraction fraction1, Fraction fraction2){
+  switch (comparerbis(&fraction1, &fraction2)) {
+  case 0:
+    afficherFraction(&fraction1);
+    printf(" = ");
+    afficherFraction(&fraction2);
+    break;
+  case 1:
+    afficherFraction(&fraction1);
+    printf(" > ");
+    afficherFraction(&fraction2);
+    break;
+  case 2:
+    afficherFraction(&fraction1);
+    printf(" < ");
+    afficherFraction(&fraction2);
+    break;
+  }
+}
+
+int comparerbis(Fraction *fraction1, Fraction *fraction2) {
   Fraction cloneFraction1 = *fraction1;
   Fraction cloneFraction2 = *fraction2;
 
