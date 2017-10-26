@@ -2,5 +2,10 @@
 1509012314 source:c:\users\pc-nelson\documents\github\calculator\fonctions.c
 	"fonctions.h"
 
-1509020597 c:\users\pc-nelson\documents\github\calculator\fonctions.h
+1509050535 c:\users\pc-nelson\documents\github\calculator\fonctions.h
+
+1509050525 source:c:\users\pc-nelson\documents\github\calculator\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
 

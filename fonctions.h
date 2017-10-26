@@ -21,6 +21,6 @@ Fraction comparer(Fraction *fraction1, Fraction *fraction2); //benjamin
 
 Fraction simplifier(Fraction *fraction1);  //utiliser pgcd des deux nombres et diviser chaque nombre par le pgcd (nelson)
 
-int gcd(Fraction *fraction1, Fraction *fraction2); // nelson
+int gcd(Fraction *fraction1); // nelson
 
 #endif // FONCTIONS_H_INCLUDED
