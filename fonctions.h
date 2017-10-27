@@ -13,17 +13,17 @@ typedef struct Fraction {
   int denominateur;
 }Fraction;
 Fraction ecrire();
-void afficherFraction(Fraction *fraction);
-void comparer(Fraction *fraction1, Fraction *fraction2);
-int comparerbis(Fraction *fraction1, Fraction *fraction2);
-void choisirOperation(Fraction *fraction1, Fraction *fraction2);
-void metreSurMemeDenominateur(Fraction *fraction1, Fraction *fraction2);
-void afficherResultat(Fraction *fraction);
-Fraction additionner(Fraction *fraction1, Fraction *fraction2);
-Fraction diviser(Fraction *fraction1, Fraction *fraction2);
-Fraction soustraire(Fraction *fraction1, Fraction *fraction2);
-Fraction multiplier(Fraction *fraction1, Fraction *fraction2);
-Fraction simplifier(Fraction *fraction1);  //utiliser pgcd des deux nombres et diviser chaque nombre par le pgcd (nelson)
-int gcd(int nombre1, int nombre2);
+void afficherFraction(Fraction *fraction); // affiche la valeur d'une fraction.
+void comparer(Fraction *fraction1, Fraction *fraction2); // Prend la valeur de la fonction comparerbis pour ensuite afficher la comparaison des deux fractions avec >, < et =
+int comparerbis(Fraction *fraction1, Fraction *fraction2);// Determine quelle fraction est la plus grande par rapport a l'autre
+void choisirOperation(Fraction *fraction1, Fraction *fraction2); // Affiche le menu du choix d'opération, récupere la saisie et choisit l'opération en fonction de celle-ci.
+void metreSurMemeDenominateur(Fraction *fraction1, Fraction *fraction2); // Permet de mettre sous le meme denominateur deux fractions
+void afficherResultat(Fraction *fraction); // Affiche le resultat d'une operation.
+Fraction additionner(Fraction *fraction1, Fraction *fraction2); //additionne deux fractions
+Fraction diviser(Fraction *fraction1, Fraction *fraction2);//divise deux fractions
+Fraction soustraire(Fraction *fraction1, Fraction *fraction2);//soustrait deux fractions
+Fraction multiplier(Fraction *fraction1, Fraction *fraction2);//multiplie deux fractions
+Fraction simplifier(Fraction *fraction1);  //Simplifie une fraction en divisant sont numerateur et son denominateur par leur pgcd.
+int gcd(int nombre1, int nombre2); //Exprime la fonction pgcd par l'algorithme d'euclide
 
 #endif // FONCTIONS_H_INCLUDED
