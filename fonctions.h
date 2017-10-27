@@ -10,7 +10,7 @@ Fraction ecrire(); //hugo
 void afficherFraction(Fraction *fraction);
 void comparer(Fraction fraction1, Fraction fraction2);
 int comparerbis(Fraction *fraction1, Fraction *fraction2);
-Fraction choisirOperation(Fraction *fraction1, Fraction *fraction2); //leo
+void choisirOperation(Fraction *fraction1, Fraction *fraction2); //leo
 void metreSurMemeDenominateur(Fraction *fraction1, Fraction *fraction2);
 void afficherResultat(Fraction fraction); //benjamin
 Fraction additionner(Fraction *fraction1, Fraction *fraction2); //hugo
