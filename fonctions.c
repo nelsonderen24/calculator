@@ -2,26 +2,6 @@
 #include <stdlib.h>
 #include "fonctions.h"
 
-Fraction *creerFraction() {
-  //Allocation d'un espace pour créer la fraction
-  Fraction *nouvelleFraction = malloc(sizeof(*nouvelleFraction));
-  if (nouvelleFraction == 0)
-  {
-    exit(EXIT_FAILURE);
-  }
-
-  //Initialisation de la fraction
-  nouvelleFraction->denominateur = 1;
-  nouvelleFraction->numerateur = 1;
-
-  return nouvelleFraction;
-}
-
-void changerValeur(Fraction *fraction, int numerateur, int denominateur) {
-  fraction->numerateur = numerateur;
-  fraction->denominateur = denominateur;
-}
-
 void afficherFraction(Fraction *fraction) {
   printf("%d/%d", fraction->numerateur, fraction->denominateur);
 }
