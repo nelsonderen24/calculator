@@ -4,3 +4,13 @@
 
 1509020597 c:\users\pc-nelson\documents\github\calculator\fonctions.h
 
+1509050411 source:c:\users\hugo0\onedrive\documents\github\calculator\fonctions.c
+	"fonctions.h"
+
+1509040302 c:\users\hugo0\onedrive\documents\github\calculator\fonctions.h
+
+1509040303 source:c:\users\hugo0\onedrive\documents\github\calculator\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+
