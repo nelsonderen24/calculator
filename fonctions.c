@@ -2,20 +2,52 @@
 #include <stdlib.h>
 #include "fonctions.h"
 
+void choisirOperation(Fraction *fraction1, Fraction *fraction2){
+  printf("Choisir une opération : 1 - Additionner \n 2 - Soustraire \n 3 - Diviser \n 4 - Multiplier \n 5 - Comparer \n 6 - Simplifier \n");
+  int operation;
+  scanf("%d", &operation);
+
+  switch (operation) {
+  case 1:
+    afficherFraction(additionner(&fraction1, &fraction2));
+    break;
+  case 2:
+    afficherFraction(soustraire(&fraction1, &fraction2));
+    break;
+  case 3:
+    afficherFraction(diviser(&fraction1, &fraction2));
+    break;
+  case 4:
+    afficherFraction(multiplier(&fraction1, &fraction2));
+    break;
+  case 5:
+    comparer(&fraction1, &fraction2);
+    break;
+  case 6:
+    afficherFraction(simplifier(&fraction1));
+    afficherFraction(simplifier(&fraction2));
+    break;
+  default:
+    printf("Erreur de frappe, relancez la calculette.");
+    break;
+  }
+}
+
 int gcd(Fraction *fraction1){
+>>>>>>> a32c209617edbbeb5e3a65c7c8a3cbb5a0acb3ab
   int reste = 1;
   int dividende;
    int diviseur;
-  if (fraction1->numerateur < fraction1->denominateur){
+  if (fraction1->numerateur < fraction1->denominateur) {
     dividende = fraction1->numerateur;
     diviseur = fraction1->denominateur;
-  } else if (fraction1->numerateur > fraction1->denominateur){
+  } else if (fraction1->numerateur > fraction1->denominateur) {
     dividende = fraction1->denominateur;
     diviseur= fraction1->numerateur;
   } else {
     return fraction1->denominateur;
   }
-  while (diviseur%dividende != 0){
+  while (diviseur%dividende != 0) {
     reste = diviseur%dividende;
     dividende = diviseur;
     diviseur = reste;
@@ -23,7 +55,7 @@ int gcd(Fraction *fraction1){
   return reste;
 }
 
-Fraction simplifier(Fraction *fraction1){
+Fraction simplifier(Fraction *fraction1) {
   int pgcd = gcd(&fraction1);
   Fraction fraction;
   fraction.numerateur = (fraction1->numerateur)/pgcd;
@@ -31,22 +63,36 @@ Fraction simplifier(Fraction *fraction1){
   return fraction;
 }
 
-Fraction additionner(Fraction *fraction1, Fraction *fraction2){
+Fraction additionner(Fraction *fraction1, Fraction *fraction2) {
   Fraction fraction;
   fraction.numerateur = (((fraction1->numerateur) * (fraction2->denominateur)) + ((fraction2->numerateur) * (fraction1->denominateur)));
   fraction.denominateur = (fraction1->denominateur * fraction2->denominateur);
+  return simplifier(fraction);
+}
+
+Fraction soustraire(Fraction *fraction1, Fraction *fraction2) {
+  Fraction fraction;
+  fraction.numerateur = (((fraction1->numerateur) * (fraction2->denominateur) - (fraction1->numerateur) * (fraction2->denominateur)));
+  fraction.denominateur = (((fraction1->numerateur) * (fraction2->denominateur) * (fraction1->numerateur) * (fraction2->denominateur)));
   return fraction;
 }
 
-Fraction diviser(Fraction *fraction1, Fraction *fraction2){
+Fraction multiplier(Fraction *fraction1, Fraction *fraction2) {
+  Fraction fraction;
+  fraction.numerateur = ((fraction1->numerateur) * (fraction2->denominateur));
+  fraction.denominateur = ((fraction1->denominateur) * (fraction2->denominateur));
+  return fraction;
+}
+
+
+Fraction diviser(Fraction *fraction1, Fraction *fraction2) {
   Fraction fraction;
   fraction.numerateur = ((fraction1->numerateur) * (fraction1->denominateur));
   fraction.denominateur = ((fraction2->numerateur) * (fraction2->denominateur));
-  return fraction;
-
+  return simplifier(fraction);
 }
 
-Fraction ecrire(){
+Fraction ecrire() {
   Fraction fraction;
   printf("Entrer une fraction :\n");
   printf("Numerateur :\n");
@@ -57,10 +103,10 @@ Fraction ecrire(){
 }
 
 void afficherFraction(Fraction *fraction) {
-  printf("%d/%d", fraction->numerateur, fraction->denominateur);
+  printf("Le resultat est : %d/%d", fraction->numerateur, fraction->denominateur);
 }
 
-void comparer(Fraction fraction1, Fraction fraction2){
+void comparer(Fraction fraction1, Fraction fraction2) {
   switch (comparerbis(&fraction1, &fraction2)) {
   case 0:
     afficherFraction(&fraction1);
@@ -80,7 +126,7 @@ void comparer(Fraction fraction1, Fraction fraction2){
   }
 }
 
-int comparerbis(Fraction *fraction1, Fraction *fraction2) {
+int comparerbis(Fraction *fraction1, FractioafficherFraction(simplifier(&fraction1));n *fraction2) {
   Fraction cloneFraction1 = *fraction1;
   Fraction cloneFraction2 = *fraction2;
 
