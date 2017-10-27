@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1509012314 source:c:\users\pc-nelson\documents\github\calculator\fonctions.c
+1509095568 source:c:\users\pc-nelson\documents\github\calculator\fonctions.c
+	<stdio.h>
+	<stdlib.h>
 	"fonctions.h"
 
-1509050535 c:\users\pc-nelson\documents\github\calculator\fonctions.h
+1509095577 c:\users\pc-nelson\documents\github\calculator\fonctions.h
 
-1509050525 source:c:\users\pc-nelson\documents\github\calculator\main.c
+1509094069 source:c:\users\pc-nelson\documents\github\calculator\main.c
 	<stdio.h>
 	<stdlib.h>
 	"fonctions.h"
