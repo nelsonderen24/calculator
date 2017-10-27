@@ -1,9 +1,7 @@
 /*
-// Projet DMSKJBMDKJBV
-// Auteur :
-// Date :
-
-
+// Projet : Calculatrice sur nombres rationnels
+// Auteur : Nelson Deren, Hugo Fernandez, Leo Chazeau, Benjamin Destruhaut
+// Date : 27/10/17
 */
 
 
@@ -21,7 +19,7 @@ void comparer(Fraction *fraction1, Fraction *fraction2);
 int comparerbis(Fraction *fraction1, Fraction *fraction2);
 void choisirOperation(Fraction *fraction1, Fraction *fraction2);
 void metreSurMemeDenominateur(Fraction *fraction1, Fraction *fraction2);
-void afficherResultat(Fraction fraction);
+void afficherResultat(Fraction *fraction);
 Fraction additionner(Fraction *fraction1, Fraction *fraction2);
 Fraction diviser(Fraction *fraction1, Fraction *fraction2);
 Fraction soustraire(Fraction *fraction1, Fraction *fraction2);

@@ -10,28 +10,28 @@ void choisirOperation(Fraction *fraction1, Fraction *fraction2){
   switch (operation) {
     case 1:
       fraction = additionner(fraction1, fraction2);
-      afficherFraction(&fraction);
+      afficherResultat(&fraction);
       break;
     case 2:
       fraction = soustraire(fraction1, fraction2);
-      afficherFraction(&fraction);
+      afficherResultat(&fraction);
       break;
     case 3:
       fraction = diviser(fraction1, fraction2);
-      afficherFraction(&fraction);
+      afficherResultat(&fraction);
       break;
     case 4:
       fraction = multiplier(fraction1, fraction2);
-      afficherFraction(&fraction);
+      afficherResultat(&fraction);
       break;
     case 5:
       comparer(fraction1, fraction2);
       break;
     case 6:
       fraction = simplifier(fraction1);
-      afficherFraction(&fraction);
+      afficherResultat(&fraction);
       fraction = simplifier(fraction2);
-      afficherFraction(&fraction);
+      afficherResultat(&fraction);
       break;
     default:
       printf("Erreur de frappe, relancez la calculette.\n");
@@ -43,7 +43,6 @@ int gcd(int nombre1, int nombre2){
 }
 Fraction simplifier(Fraction *fraction1) {
   int pgcd = gcd(fraction1->numerateur, fraction1->denominateur);
-  printf("%d", pgcd);
   Fraction fraction;
   fraction.numerateur = (fraction1->numerateur)/pgcd;
   fraction.denominateur = (fraction1->denominateur)/pgcd;
@@ -63,7 +62,7 @@ Fraction soustraire(Fraction *fraction1, Fraction *fraction2) {
 }
 Fraction multiplier(Fraction *fraction1, Fraction *fraction2) {
   Fraction fraction;
-  fraction.numerateur = ((fraction1->numerateur) * (fraction2->denominateur));
+  fraction.numerateur = ((fraction1->numerateur) * (fraction2->numerateur));
   fraction.denominateur = ((fraction1->denominateur) * (fraction2->denominateur));
   return fraction;
 }
@@ -83,24 +82,38 @@ Fraction ecrire() {
   return fraction;
 }
 void afficherFraction(Fraction *fraction) {
-  printf("Le resultat est : %d/%d \n", fraction->numerateur, fraction->denominateur);
+  printf("%d/%d", fraction->numerateur, fraction->denominateur);
 }
+
+void afficherResultat(Fraction *fraction) {
+  Fraction fractionSimplifie = simplifier(fraction);
+  printf("Le resultat est : ");
+  if (fractionSimplifie.denominateur != 1)
+  {
+    afficherFraction(&fractionSimplifie);
+  }
+  else {
+    printf("%d", fractionSimplifie.numerateur);
+  }
+  printf("\n");
+}
+
 void comparer(Fraction *fraction1, Fraction *fraction2) {
-  switch (comparerbis(&fraction1, &fraction2)) {
+  switch (comparerbis(fraction1, fraction2)) {
     case 0:
-      afficherFraction(&fraction1);
+      afficherFraction(fraction1);
       printf(" = ");
-      afficherFraction(&fraction2);
+      afficherFraction(fraction2);
       break;
     case 1:
-      afficherFraction(&fraction1);
+      afficherFraction(fraction1);
       printf(" > ");
-      afficherFraction(&fraction2);
+      afficherFraction(fraction2);
       break;
     case 2:
-      afficherFraction(&fraction1);
+      afficherFraction(fraction1);
       printf(" < ");
-      afficherFraction(&fraction2);
+      afficherFraction(fraction2);
       break;
     }
 }

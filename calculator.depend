@@ -11,10 +11,15 @@
 	<stdlib.h>
 	"fonctions.h"
 
-1509093283 source:c:\users\pc-benjamindst\documents\github\calculators\main.c
+1509100048 source:c:\users\pc-benjamindst\documents\github\calculators\main.c
 	<stdio.h>
 	<stdlib.h>
 	"fonctions.h"
 
-1509093677 c:\users\pc-benjamindst\documents\github\calculators\fonctions.h
+1509100587 c:\users\pc-benjamindst\documents\github\calculators\fonctions.h
+
+1509101352 source:c:\users\pc-benjamindst\documents\github\calculators\fonctions.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
 
