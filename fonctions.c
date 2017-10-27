@@ -1,8 +1,5 @@
 #include "fonctions.h"
 
-<<<<<<< HEAD
-int gcd(Fraction *fraction1) {
-=======
 void choisirOperation(Fraction *fraction1, Fraction *fraction2){
   printf("Choisir une opération : 1 - Additionner \n 2 - Soustraire \n 3 - Diviser \n 4 - Multiplier \n 5 - Comparer \n 6 - Simplifier \n");
   int operation;
@@ -90,12 +87,7 @@ Fraction diviser(Fraction *fraction1, Fraction *fraction2) {
   Fraction fraction;
   fraction.numerateur = ((fraction1->numerateur) * (fraction1->denominateur));
   fraction.denominateur = ((fraction2->numerateur) * (fraction2->denominateur));
-<<<<<<< HEAD
-  return fraction;
-=======
   return simplifier(fraction);
-
->>>>>>> a32c209617edbbeb5e3a65c7c8a3cbb5a0acb3ab
 }
 
 Fraction ecrire() {
