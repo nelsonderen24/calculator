@@ -9,4 +9,6 @@ int main()
   Fraction fraction2 = ecrire();
   Fraction resultat = choisirOperation(&fraction1, &fraction2);
   afficherResultat(resultat);
+
+  return 0;
 }
