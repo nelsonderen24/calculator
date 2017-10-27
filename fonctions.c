@@ -1,19 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "fonctions.h"
 
 void choisirOperation(Fraction *fraction1, Fraction *fraction2){
   printf("Choisir une opération : 1 - Additionner \n 2 - Soustraire \n 3 - Diviser \n 4 - Multiplier \n 5 - Comparer \n 6 - Simplifier \n");
   int operation;
   scanf("%d", &operation);
-
+  Fraction fraction;
   switch (operation) {
   case 1:
-    afficherFraction(additionner(&fraction1, &fraction2));
+    fraction = additionner(&fraction1, &fraction2)
+    afficherFraction(&fraction);
     break;
   case 2:
-    afficherFraction(soustraire(&fraction1, &fraction2));
+    afficherFraction(&soustraire(&fraction1, &fraction2));
     break;
   case 3:
-    afficherFraction(diviser(&fraction1, &fraction2));
+    afficherFraction(&diviser(&fraction1, &fraction2));
     break;
   case 4:
     afficherFraction(multiplier(&fraction1, &fraction2));
