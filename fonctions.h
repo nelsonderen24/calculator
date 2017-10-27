@@ -7,7 +7,7 @@ typedef struct Fraction {
 }Fraction;
 Fraction ecrire(); //hugo
 void afficherFraction(Fraction *fraction);
-void comparer(Fraction fraction1, Fraction fraction2);
+void comparer(Fraction *fraction1, Fraction *fraction2);
 int comparerbis(Fraction *fraction1, Fraction *fraction2);
 void choisirOperation(Fraction *fraction1, Fraction *fraction2); //leo
 void metreSurMemeDenominateur(Fraction *fraction1, Fraction *fraction2);
