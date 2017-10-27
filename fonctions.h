@@ -12,7 +12,6 @@ typedef struct Fraction {
   int numerateur;
   int denominateur;
 }Fraction;
-
 Fraction ecrire();
 void afficherFraction(Fraction *fraction);
 void comparer(Fraction *fraction1, Fraction *fraction2);

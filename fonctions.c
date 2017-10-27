@@ -84,7 +84,6 @@ Fraction ecrire() {
 void afficherFraction(Fraction *fraction) {
   printf("%d/%d", fraction->numerateur, fraction->denominateur);
 }
-
 void afficherResultat(Fraction *fraction) {
   Fraction fractionSimplifie = simplifier(fraction);
   printf("Le resultat est : ");
