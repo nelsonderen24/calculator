@@ -5,7 +5,6 @@ typedef struct Fraction {
   int numerateur;
   int denominateur;
 }Fraction;
-
 Fraction ecrire(); //hugo
 void afficherFraction(Fraction *fraction);
 void comparer(Fraction fraction1, Fraction fraction2);
